@@ -6,6 +6,26 @@ public class Validation {
 	private String regexAccount = "\\d+\\s{1}[A-Z][a-z]+\\s{1}\\d+\\s{1}\\d+\\s{1}\\d+";
 	private String regexMovement = "\\d+\\s{1}\\d+\\s{1}\\d+\\s{1}\\d{1}";
 
+	public boolean validarContaCorrente(String conta) {
+		if (conta.matches(regexAccount)) {
+			if (validarTipoDeConta(conta))
+				return true;
+			else
+				JOptionPane.showMessageDialog(null,
+						"Tipo de conta existente:\n1 - Física\n2 - Conjunta\n3 - Jurídica\n4 - Especial\n",
+						"Error - tipo de conta inválido", JOptionPane.ERROR_MESSAGE);
+		} else
+			JOptionPane.showMessageDialog(null, "Dado(s) inválido(s). Tente novamente!", "Error",
+					JOptionPane.ERROR_MESSAGE);
+
+		return false;
+	}
+
+	private boolean validarTipoDeConta(String conta) {
+		int tipoConta = getDado(conta, 4);
+		return tipoConta < 1 || tipoConta > 4 ? false : true;
+	}
+
 	public boolean validarMovimento(String movimento) {
 		if (movimento.matches(regexMovement)) {
 			if (validarTipoDeMovimento(movimento)) {
@@ -38,23 +58,4 @@ public class Validation {
 		return Integer.parseInt(tokens[index]);
 	}
 
-	public boolean validarContaCorrente(String conta) {
-		if (conta.matches(regexAccount)) {
-			if (validarTipoDeConta(conta))
-				return true;
-			else
-				JOptionPane.showMessageDialog(null,
-						"Tipo de conta existente:\n1 - Física\n2 - Conjunta\n3 - Jurídica\n4 - Especial\n",
-						"Error - tipo de conta inválido", JOptionPane.ERROR_MESSAGE);
-		} else
-			JOptionPane.showMessageDialog(null, "Dado(s) inválido(s). Tente novamente!", "Error",
-					JOptionPane.ERROR_MESSAGE);
-
-		return false;
-	}
-
-	private boolean validarTipoDeConta(String conta) {
-		int tipoConta = getDado(conta, 4);
-		return tipoConta < 1 || tipoConta > 4 ? false : true;
-	}
 }

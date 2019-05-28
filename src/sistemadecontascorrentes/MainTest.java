@@ -8,7 +8,7 @@ public class MainTest {
 
 	public static void main(String[] args) throws IOException {
 		Conta[] contasCorrentes = new Conta[5];
-		MovimentoConta[] movimentosContas = new MovimentoConta[3];
+		MovimentoConta[] movimentosContas = new MovimentoConta[10];
 		ClasseMetodos metodos = new ClasseMetodos();
 
 		String message = String.format("%s%n%s%n%s%n%s%n%s", "1 - Cadastrar contas correntes",

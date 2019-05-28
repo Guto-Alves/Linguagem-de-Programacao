@@ -56,28 +56,45 @@ public class ClasseMetodos {
 		while ((accountLine = accountsReader.readLine()) != null) {
 			String[] accountTokens = accountLine.split(" ");
 
+			Conta account = new Conta(Integer.parseInt(accountTokens[0]), accountTokens[1],
+					Double.parseDouble(accountTokens[2]), Double.parseDouble(accountTokens[3]),
+					Integer.parseInt(accountTokens[4]));
+
 			BufferedReader movementReader = new BufferedReader(new FileReader(movementsFile));
 			String movementLine;
 			while ((movementLine = movementReader.readLine()) != null) {
 				String[] movementTokens = movementLine.split(" ");
 
-				if (accountTokens[0].equals(movementTokens[0])) { // identifica correnpondência cód.
-					if (movementTokens[3].equals("1")) // verifica status< == 1
-						writer.write(String.format("%s %s %s %s %s%n", accountTokens[0], accountTokens[1],
-								accountTokens[2], accountTokens[3], accountTokens[4]));
-					else if (movementTokens[3].equals("2")) { // verifica statusM == 2
-						if (accountTokens[2] != movementTokens[1]) { // caso saldoContaC < ValorMovimentoM
+				MovimentoConta movement = new MovimentoConta(Integer.parseInt(movementTokens[0]),
+						Double.parseDouble(movementTokens[1]), Integer.parseInt(movementTokens[2]),
+						Integer.parseInt(movementTokens[3]));
 
-						} else {// caso saldoContaC > ValorMovimentoM
-
+				if (account.getCod() == movement.getCod()) {
+					if (account.getSaldo() >= movement.getValor()) {
+						double newBalance = account.getSaldo() - movement.getValor();
+						account.setSaldo(newBalance);
+					} else { // valor limite
+						if (movement.getValor() > (account.getSaldo() + account.getLimite())) {
+							account.setSaldo((account.getSaldo() + account.getLimite()) - movement.getValor());
+							account.setLimite(0);
+						} else {
+							double valueMovement = movement.getValor() - account.getSaldo();
+							double newLimit = account.getLimite() - valueMovement;
+							account.setLimite(newLimit);
+							account.setSaldo(0);
 						}
 					}
 				}
+				if (account.getCod() < movement.getCod())
+					break;
 			}
-			movementReader.close();
-		}
-		accountsReader.close();
 
+			movementReader.close();
+			writer.write("" + account);
+		}
+
+		accountsReader.close();
+		writer.close();
 	}
 
 	public void consultarCadastros() throws IOException {
@@ -124,7 +141,7 @@ public class ClasseMetodos {
 		JOptionPane.showMessageDialog(null, file, description, JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	public void sortFile(String fileName, Object[] accounts) throws IOException {
+	private void sortFile(String fileName, Object[] accounts) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(fileName));
 		String line;
 
@@ -136,13 +153,9 @@ public class ClasseMetodos {
 			while ((line = reader.readLine()) != null) {
 				String[] tokens = line.split(" ");
 
-				contasCorrentes[counter] = new Conta();
+				contasCorrentes[counter] = new Conta(Integer.parseInt(tokens[0]), tokens[1],
+						Double.parseDouble(tokens[2]), Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4]));
 
-				contasCorrentes[counter].setCod(Integer.parseInt(tokens[0]));
-				contasCorrentes[counter].setNome(tokens[1]);
-				contasCorrentes[counter].setSaldo(Double.parseDouble(tokens[2]));
-				contasCorrentes[counter].setLimite(Double.parseDouble(tokens[3]));
-				contasCorrentes[counter].setTipo(Integer.parseInt(tokens[4]));
 				counter++;
 			}
 			reader.close();
@@ -174,12 +187,8 @@ public class ClasseMetodos {
 			while ((line = reader.readLine()) != null) {
 				String[] tokens = line.split(" ");
 
-				movimentosContas[counter] = new MovimentoConta();
-
-				movimentosContas[counter].setCod(Integer.parseInt(tokens[0]));
-				movimentosContas[counter].setValor(Double.parseDouble(tokens[1]));
-				movimentosContas[counter].setTipo(Integer.parseInt(tokens[3]));
-				movimentosContas[counter].setStatus(Integer.parseInt(tokens[2]));
+				movimentosContas[counter] = new MovimentoConta(Integer.parseInt(tokens[0]),
+						Double.parseDouble(tokens[1]), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]));
 				counter++;
 			}
 			reader.close();

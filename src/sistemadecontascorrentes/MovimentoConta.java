@@ -6,11 +6,12 @@
 .............................................................................................................
    int        double              int             int
 
-TipoMovimento
+ TipoMovimento
    1 ----------- crédito
    2 ----------- débito
 
  */
+
 package sistemadecontascorrentes;
 
 public class MovimentoConta {
@@ -18,6 +19,13 @@ public class MovimentoConta {
 	private double valor;
 	private int tipo;
 	private int status;
+
+	public MovimentoConta(int cod, double valor, int tipo, int status) {
+		this.cod = cod;
+		this.valor = valor;
+		this.tipo = tipo;
+		this.status = status;
+	}
 
 	public int getCod() {
 		return cod;
@@ -50,5 +58,4 @@ public class MovimentoConta {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-
 }

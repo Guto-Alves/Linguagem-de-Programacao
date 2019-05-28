@@ -1,18 +1,19 @@
 /*
- * ............................................................................................................................
+............................................................................................................................
 .          ContasCorrentes                                                                                                .
 ...........................................................................................................................
 . codContaC | nomeClientesC | saldoContaC | LimitecontaC |tipoContaC      .
 ..........................................................................................................................
    int         String          double        double           int
 
-tipoContaC
+ tipoContaC
    1 ----------- física
    2 ----------- conjunta
    3 ----------- jurídica
    4 ----------- especial
 
  */
+
 package sistemadecontascorrentes;
 
 public class Conta {
@@ -21,6 +22,14 @@ public class Conta {
 	private double saldo;
 	private double limite;
 	private int tipo;
+
+	public Conta(int cod, String nome, double saldo, double limite, int tipo) {
+		this.cod = cod;
+		this.nome = nome;
+		this.saldo = saldo;
+		this.limite = limite;
+		this.tipo = tipo;
+	}
 
 	public int getCod() {
 		return cod;
