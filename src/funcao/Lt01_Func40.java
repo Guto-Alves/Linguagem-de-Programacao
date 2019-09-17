@@ -10,24 +10,37 @@ package funcao;
 import javax.swing.JOptionPane;
 
 public class Lt01_Func40 {
-	private enum Status {
-		YES, NO
-	};
 
 	public static void main(String[] args) {
 		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
 		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro número inteiro"));
 
-		JOptionPane.showMessageDialog(null, "Primos entre os números digitados: " + primeNumbers(number1, number2),
+		JOptionPane.showMessageDialog(null, "Primo(s) entre os números digitados: " + primeNumbers(number1, number2),
 				"Primos entre os númeors ", JOptionPane.INFORMATION_MESSAGE);
 
+	}
+
+	public static boolean isPrime(int number) {
+		if (number < 2)
+			return false;
+
+		if (number % 2 == 0 && number > 2)
+			return false;
+
+		int root = (int) Math.sqrt(number);
+
+		for (int i = 2; i <= root; i += 2) {
+			if (number % i == 0)
+				return false;
+		}
+
+		return true;
 	}
 
 	public static String primeNumbers(int number1, int number2) {
 		String primosString = "";
 		int largest;
 		int smaller;
-		Status primo = Status.YES;
 
 		if (number1 > number2) {
 			largest = number1;
@@ -39,24 +52,12 @@ public class Lt01_Func40 {
 
 		// Verifica todos os números primos existentes entre eles
 		for (int i = smaller + 1; i < largest; i++) {
-			// verica se i é primo
-			double root = Math.sqrt(i);
-
-			for (int j = 2; j <= root; j++) {
-				if (i % j == 0) {
-					primo = Status.NO;
-					break;
-				}
-			}
-
-			if (primo == Status.YES && i != 1)
+			if (isPrime(i))
 				primosString += i + " ";
-
-			primo = Status.YES;
 		}
 
 		if (primosString.equals(""))
-			primosString = "não existe!.";
+			primosString = "não existe!";
 
 		return primosString;
 	}
