@@ -15,13 +15,12 @@ public class RecursividadeEx5 {
 		int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número inteiro: ",
 				"Serie = (N)! + (N-1)! + (N-2)! + ... + (1)!", JOptionPane.QUESTION_MESSAGE));
 
-		JOptionPane.showMessageDialog(null, String.format("Resutado da série = %d", calculaSerie5(number)),
+		JOptionPane.showMessageDialog(null, String.format("Resutado da série = %d", calcularSerie(number)),
 				"Serie = (N)! + (N-1)! + (N-2)! + ... + (1)!", JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	public static int calculaSerie5(int number) {
-		return number == 1 ? 1 : fatorial(number) + calculaSerie5(number - 1);
-
+	public static int calcularSerie(int number) {
+		return number == 1 ? 1 : fatorial(number) + calcularSerie(number - 1);
 	}
 
 	public static int fatorial(int number) throws IllegalArgumentException {
