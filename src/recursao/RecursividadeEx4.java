@@ -15,14 +15,14 @@ public class RecursividadeEx4 {
 		int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número inteiro: ",
 				" Serie = (N/1) +(N-1 / 2 ) + (N-2 / 3) + .... + (1/N)", JOptionPane.QUESTION_MESSAGE));
 
-		JOptionPane.showMessageDialog(null, String.format("Resutado da série = %,.2f", calculaSerie4(number, 1)),
+		JOptionPane.showMessageDialog(null, String.format("Resutado da série = %f", calcularSerie(number, 1)),
 				" Serie = (N/1) +(N-1 / 2 ) + (N-2 / 3) + .... + (1/N)", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
-	public static double calculaSerie4(int number, int denominator) {
-		return number <= 1 ? number : (number / denominator) + calculaSerie4(number - 1, denominator + 1);
-
+	public static double calcularSerie(int number, int denominator) {
+		if (number < 1)
+			return number / denominator;
+		else
+			return (double) number / denominator + calcularSerie(number - 1, denominator + 1);
 	}
-
 }
