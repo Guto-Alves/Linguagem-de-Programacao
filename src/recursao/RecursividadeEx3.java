@@ -15,13 +15,12 @@ public class RecursividadeEx3 {
 		int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número inteiro: ",
 				"Serie = (1/1) + (1/2) + (1/3) + ....+ (1/N)", JOptionPane.QUESTION_MESSAGE));
 
-		JOptionPane.showMessageDialog(null, String.format("Resutado da série é de %,.2f", calculaSerie3(number)),
+		JOptionPane.showMessageDialog(null, String.format("Resutado da série é de %,.2f", calcularSerie(number)),
 				"Serie = (1/1) + (1/2) + (1/3) + ....+ (1/N)", JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	public static double calculaSerie3(int number) {
-		return number == 1 ? 1 : ((double) 1 / number) + (1 / calculaSerie3(number - 1));
-
+	public static double calcularSerie(int number) {
+		return number == 1 ? 1 : ((double) 1 / number) + calcularSerie(number - 1);
 	}
 
 }
