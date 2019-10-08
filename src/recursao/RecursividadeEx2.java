@@ -14,13 +14,13 @@ public class RecursividadeEx2 {
 	public static void main(String[] args) {
 		int number = Integer.parseInt(JOptionPane.showInputDialog("Digite um número: "));
 
-		JOptionPane.showMessageDialog(null, String.format("Resultado da série é %d", calculaSerie2(number)),
+		JOptionPane.showMessageDialog(null, String.format("Resultado da série é %d", calculaSerie(number)),
 				"Serie = (N) + (N-1) + (N-2) + ... + (1) ", JOptionPane.INFORMATION_MESSAGE);
 
 	}
 
-	public static int calculaSerie2(int number) {
-		return number <= 1 ? number : number + calculaSerie2(number - 1);
+	public static int calculaSerie(int number) {
+		return number == 1 ? 1 : number + calculaSerie(number - 1);
 
 	}
 
