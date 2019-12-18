@@ -1,8 +1,8 @@
 /*
- * Objetivo     : 40. Receba 2 números inteiros. Verifique e mostre todos os números primos existentes entre eles.
+ * Objetivo     : 40. Receba 2 nÃºmeros inteiros. Verifique e mostre todos os nÃºmeros primos existentes entre eles.
  *
  * Programador  : Gustavo Alves
- * Data Criação : 9 de mar de 2019
+ * Data CriaÃ§Ã£o : 9 de mar de 2019
  */
 
 package funcao;
@@ -12,11 +12,11 @@ import javax.swing.JOptionPane;
 public class Lt01_Func40 {
 
 	public static void main(String[] args) {
-		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
-		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro número inteiro"));
+		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um nÃºmero inteiro"));
+		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro nÃºmero inteiro"));
 
-		JOptionPane.showMessageDialog(null, "Primo(s) entre os números digitados: " + primeNumbers(number1, number2),
-				"Primos entre os númeors ", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Primo(s) entre os nÃºmeros digitados: " + primeNumbers(number1, number2),
+				"Primos entre os nÃºmeors ", JOptionPane.INFORMATION_MESSAGE);
 
 	}
 
@@ -29,7 +29,7 @@ public class Lt01_Func40 {
 
 		int root = (int) Math.sqrt(number);
 
-		for (int i = 2; i <= root; i += 2) {
+		for (int i = 2; i <= root; i++) {
 			if (number % i == 0)
 				return false;
 		}
@@ -50,14 +50,14 @@ public class Lt01_Func40 {
 			smaller = number1;
 		}
 
-		// Verifica todos os números primos existentes entre eles
+		// Verifica todos os nÃºmeros primos existentes entre eles
 		for (int i = smaller + 1; i < largest; i++) {
 			if (isPrime(i))
 				primosString += i + " ";
 		}
 
 		if (primosString.equals(""))
-			primosString = "não existe!";
+			primosString = "nÃ£o existe!";
 
 		return primosString;
 	}
