@@ -9,6 +9,7 @@
 package vetor;
 
 import java.security.SecureRandom;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lt01_VetorEx07 {
@@ -17,8 +18,8 @@ public class Lt01_VetorEx07 {
 	public static void main(String[] args) {
 		int[] array = new int[20];
 
-		array = fillArray(array);
-		array = bubbleSort(array);
+		fillArray(array);
+		bubbleSort(array);
 		displayArray(array);
 
 		Scanner scanner = new Scanner(System.in);
@@ -30,11 +31,26 @@ public class Lt01_VetorEx07 {
 			System.out.println("Valor não encontrado!");
 
 		scanner.close();
-
 	}
 
-	// verifica a existência de um valor no vetor usando o técnica da pesquisa
-	// binária
+	public static void fillArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			array[i] = random.nextInt(21);
+		}
+	}
+
+	public static void bubbleSort(int[] array) {
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = i + 1; j < array.length; j++) {
+				if (array[j] < array[i]) {
+					int aux = array[i];
+					array[i] = array[j];
+					array[j] = aux;
+				}
+			}
+		}
+	}
+
 	public static boolean binarySearch(int[] array, int key) {
 		int start = 0;
 		int middle = array.length / 2;
@@ -52,41 +68,11 @@ public class Lt01_VetorEx07 {
 			}
 
 		}
+
 		return false;
-
-	}
-
-	public static int[] fillArray(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			array[i] = random.nextInt(21);
-			System.out.println(i + 1 + "° = " + array[i]);
-		}
-		return array;
-	}
-
-	public static int[] bubbleSort(int[] array) {
-
-		for (int i = 0; i < array.length - 1; i++) {
-			for (int j = i + 1; j < array.length; j++) {
-				if (array[j] < array[i]) {
-					int aux = array[i];
-					array[i] = array[j];
-					array[j] = aux;
-				}
-			}
-		}
-
-		return array;
 	}
 
 	public static void displayArray(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			if (i == array.length - 1)
-				System.out.printf("%d.%n", array[i]);
-			else
-				System.out.printf("%d, ", array[i]);
-
-		}
+		System.out.println(Arrays.toString(array));
 	}
-
 }

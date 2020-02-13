@@ -16,21 +16,21 @@ public class Lt01_VetorEx01 {
 	public static void main(String[] args) {
 		int[] array = new int[50];
 
-		array = fillArray(array);
+		fill(array);
 
 		System.out.printf("Média dos valores entre 10 e 200 = %,.1f%n", average(array));
 		System.out.printf("Soma dos números ímpares = %d", sumOdd(array));
 	}
 
-	public static int[] fillArray(int[] array) {
+	public static void fill(int[] array) {
 		Scanner scanner = new Scanner(System.in);
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%d° Valor: ", i + 1);
 			array[i] = scanner.nextInt();
 		}
+
 		scanner.close();
-		return array;
 	}
 
 	public static double average(int[] array) {
@@ -39,10 +39,11 @@ public class Lt01_VetorEx01 {
 
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] > 10 && array[i] < 200) {
-				counter++;
 				average += array[i];
+				counter++;
 			}
 		}
+
 		average = average / counter;
 
 		return average;
@@ -58,5 +59,4 @@ public class Lt01_VetorEx01 {
 
 		return sum;
 	}
-
 }

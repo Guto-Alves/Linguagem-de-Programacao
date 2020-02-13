@@ -16,20 +16,20 @@ public class Lt01_VetorEx02 {
 	public static void main(String[] args) {
 		int[] array = new int[100];
 
-		array = fill(array);
+		fill(array);
 		displaySmallestAndLargest(array);
 		System.out.printf("Média dos valores é de %,.1f", average(array));
 	}
 
-	public static int[] fill(int[] array) {
+	public static void fill(int[] array) {
 		Scanner scanner = new Scanner(System.in);
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%d° Valor: ", i + 1);
 			array[i] = scanner.nextInt();
 		}
+
 		scanner.close();
-		return array;
 	}
 
 	public static void displaySmallestAndLargest(int[] array) {
@@ -57,5 +57,4 @@ public class Lt01_VetorEx02 {
 
 		return average;
 	}
-
 }

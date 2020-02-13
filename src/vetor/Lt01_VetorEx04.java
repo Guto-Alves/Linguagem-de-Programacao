@@ -17,29 +17,28 @@ public class Lt01_VetorEx04 {
 	public static void main(String[] args) {
 		double[] array = new double[30];
 
-		array = fillArray(array);
+		fillArray(array);
 
-		double average = averageArray(array);
+		double average = calculateAverage(array);
 
 		System.out.printf("Média do grupo = %,.1f%n", average);
-		System.out.printf("Quantidade de notas acima = %d%n", aboveAverage(array, average));
-		displayBelowAverage(array, average);
+		System.out.printf("Quantidade de notas acima do grupo = %d%n", aboveAverage(array, average));
 
+		displayValuesBelowTheAverage(array, average);
 	}
 
-	public static double[] fillArray(double[] array) {
+	public static void fillArray(double[] array) {
 		Scanner scanner = new Scanner(System.in);
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Valor para posição %d: ", i);
 			array[i] = scanner.nextInt();
 		}
-		scanner.close();
 
-		return array;
+		scanner.close();
 	}
 
-	public static double averageArray(double[] array) {
+	public static double calculateAverage(double[] array) {
 		double average = 0;
 
 		for (int i = 0; i < array.length; i++)
@@ -52,6 +51,7 @@ public class Lt01_VetorEx04 {
 
 	public static int aboveAverage(double[] array, double average) {
 		int counter = 0;
+
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] > average)
 				counter++;
@@ -60,13 +60,12 @@ public class Lt01_VetorEx04 {
 		return counter;
 	}
 
-	public static void displayBelowAverage(double[] array, double average) {
+	public static void displayValuesBelowTheAverage(double[] array, double average) {
 		System.out.print("Posições dos valores abaixo da média = ");
 
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] < average)
 				System.out.print(i + " ");
-
 		}
 	}
 }

@@ -15,54 +15,45 @@ public class Lt01_VetorEx03 {
 	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		int[] vt1 = new int[3];
-		int[] vt2 = new int[3];
+		int[] array1 = new int[3];
+		int[] array2 = new int[3];
 
 		System.out.println("- Valores para o primeiro vetor");
-		vt1 = fillArray(vt1);
+		fill(array1);
 
 		System.out.println("\n- Valores para o segundo vetor");
-		vt2 = fillArray(vt2);
+		fill(array2);
 
-		int[] vt3 = concatenarVetores(vt1, vt2);
+		int[] array3 = concatenate(array1, array2);
 
-		displayArray(vt3);
+		System.out.println();
 
+		display(array3);
 	}
 
-	public static int[] fillArray(int[] array) {
+	public static void fill(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%d° Valor: ", i + 1);
 			array[i] = scanner.nextInt();
 		}
-
-		return array;
 	}
 
-	// concatena quaisquer dois vetores e retorna o vetor resultando
-	public static int[] concatenarVetores(int[] vt1, int[] vt2) {
-		int[] vt3 = new int[vt1.length + vt2.length];
+	public static int[] concatenate(int[] array1, int[] array2) {
+		int[] array3 = new int[array1.length + array2.length];
 
-		for (int i = 0; i < vt1.length; i++)
-			vt3[i] = vt1[i];
-
-		for (int i = 0; i < vt2.length; i++)
-			vt3[i + vt1.length] = vt2[i];
-
-		for (int i = 0; i < vt3.length; i++) {
-			if (i < vt1.length)
-				vt3[i] = vt1[i];
+		for (int i = 0; i < array3.length; i++) {
+			if (i < array1.length)
+				array3[i] = array1[i];
 			else
-				vt3[i] = vt2[i - vt1.length];
+				array3[i] = array2[i - array1.length];
 		}
 
-		return vt3;
-
+		return array3;
 	}
 
-	public static void displayArray(int[] array) {
-		for (int valor : array)
-			System.out.print(valor + " ");
+	public static void display(int[] array) {
+		for (int value : array) {
+			System.out.print(value + " ");
+		}
 	}
-
 }

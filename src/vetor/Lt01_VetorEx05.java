@@ -14,31 +14,29 @@ public class Lt01_VetorEx05 {
 	public static void main(String[] args) {
 		int[] array = new int[20];
 
-		array = preencherArray(array);
+		fill(array);
 
-		System.out.printf("Resultado: %d", somatoriaSerie(array));
-
+		System.out.printf("Resultado: %d", calculateSum(array));
 	}
 
-	public static int[] preencherArray(int[] array) {
+	public static void fill(int[] array) {
 		Scanner scanner = new Scanner(System.in);
+
 		for (int i = 0; i < array.length; i++) {
-			System.out.printf("%dÂ° Valor: ", i + 1);
+			System.out.printf("%d° valor: ", i + 1);
 			array[i] = scanner.nextInt();
 		}
-		scanner.close();
 
-		return array;
+		scanner.close();
 	}
 
-	public static int somatoriaSerie(int[] array) {
+	public static int calculateSum(int[] array) {
 		int result = 0;
 
-		for (int i = 0; i < array.length / 2; i++)
+		for (int i = 0; i < array.length / 2; i++) {
 			result += array[i] - array[i + array.length / 2];
+		}
 
 		return result;
-
 	}
-
 }
