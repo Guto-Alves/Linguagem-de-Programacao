@@ -35,12 +35,11 @@ public class Lt01_MatrizEx09 {
 					array[i][j] = array[i - 1][j - 1] * 4;
 				else
 					array[i][j] = random.nextInt(11);
-
 			}
 
 		}
-		return array;
 
+		return array;
 	}
 
 	public static void display(int[][] array) {
@@ -53,6 +52,5 @@ public class Lt01_MatrizEx09 {
 		}
 
 		JOptionPane.showMessageDialog(null, arrayDisplay);
-
 	}
 }

@@ -24,8 +24,9 @@ public class Lt01_Func44 {
 	public static int potencia(int base, int expoente) {
 		int pow = 1;
 
-		for (int i = 1; i <= expoente; i++)
+		for (int i = 1; i <= expoente; i++) {
 			pow *= base;
+		}
 
 		return pow;
 	}

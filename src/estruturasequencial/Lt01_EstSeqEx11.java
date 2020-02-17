@@ -23,7 +23,6 @@ public class Lt01_EstSeqEx11 {
 		comprimentoCircunferencia = 2 * Math.PI * raio;
 
 		System.out.printf("Comprimento da circunferência = %,.2f m", comprimentoCircunferencia);
-
 	}
 
 }

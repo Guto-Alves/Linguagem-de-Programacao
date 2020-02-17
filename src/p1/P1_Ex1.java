@@ -6,7 +6,7 @@
  * Autor: Gustavo Alves
  */
 
-package p1questoes;
+package p1;
 
 import java.security.SecureRandom;
 

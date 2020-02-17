@@ -20,7 +20,6 @@ public class Lt01_EstSeqEx01 {
 		areaQuadrado = Math.pow(lado, 2);
 
 		JOptionPane.showMessageDialog(null, "Área do quadrado é de " + areaQuadrado + " cm²");
-
 	}
 
 }

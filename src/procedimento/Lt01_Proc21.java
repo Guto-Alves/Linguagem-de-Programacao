@@ -23,7 +23,6 @@ public class Lt01_Proc21 {
 		double grade4 = Double.parseDouble(JOptionPane.showInputDialog("Digite a 4ª nota: "));
 
 		arithmeticAverage(grade1, grade2, grade3, grade4);
-
 	}
 
 	public static void arithmeticAverage(double grade1, double grade2, double grade3, double grade4) {

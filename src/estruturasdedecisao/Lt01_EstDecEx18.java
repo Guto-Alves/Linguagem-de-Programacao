@@ -1,5 +1,6 @@
 /*
- * Objetivo: Receba 2 valores inteiros. Calcule e mostre o resultado da diferença do maior pelo menor valor.
+ * Objetivo: Receba 2 valores inteiros. Calcule e mostre o resultado da 
+ * diferença do maior pelo menor valor.
  * 
  * Autor: Gustavo Alves
  * Data: 14 de fev de 2019
@@ -24,9 +25,8 @@ public class Lt01_EstDecEx18 {
 		else
 			difference = number1 - number2;
 
-		JOptionPane.showMessageDialog(null, String.format("A diferença dos números é %d", difference),
+		JOptionPane.showMessageDialog(null, String.format("A diferença do maior pelo menor valor é %d", difference),
 				"Resultado da Diferença", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

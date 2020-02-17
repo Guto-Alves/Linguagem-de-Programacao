@@ -22,21 +22,21 @@ public class Lt01_MatrizEx08 {
 		quantidadeCadaProduto(array);
 		quantidadeProdutosSemana(array);
 		totalProdutos(array);
-
 	}
 
 	public static int[][] preencherArray(int[][] array) {
 		Scanner input = new Scanner(System.in);
+
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[0].length; j++) {
 				System.out.printf("%d° semana, %d° produto: ", i + 1, j + 1);
 				array[i][j] = input.nextInt();
 			}
 		}
+
 		input.close();
 
 		return array;
-
 	}
 
 	public static void quantidadeCadaProduto(int[][] array) {
@@ -62,7 +62,6 @@ public class Lt01_MatrizEx08 {
 
 		for (int i = 0; i < quantidadeSemana.length; i++)
 			System.out.printf("Na semana %d vendeu = %d%n", i + 1, quantidadeSemana[i]);
-
 	}
 
 	public static void totalProdutos(int[][] array) {

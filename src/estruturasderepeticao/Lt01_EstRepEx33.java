@@ -25,7 +25,6 @@ public class Lt01_EstRepEx33 {
 			serie += 1 / (double) i;
 
 		System.out.printf("Series result is %,.2f%n", serie);
-
 	}
 
 }

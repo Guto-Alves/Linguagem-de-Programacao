@@ -26,7 +26,6 @@ public class Lt01_EstSeqEx10 {
 		double diferenca = number1 - number2;
 
 		System.out.printf("Diferença = %,.f", diferenca);
-
 	}
 
 }

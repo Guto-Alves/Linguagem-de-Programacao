@@ -20,7 +20,6 @@ public class Lt01_MatrizEx12 {
 		chessboard = fillChessboard(chessboard);
 		displayChessboard(chessboard);
 		piecesSum(chessboard);
-
 	}
 
 	public static int[][] fillChessboard(int[][] chessboard) {
@@ -42,7 +41,6 @@ public class Lt01_MatrizEx12 {
 
 		for (int i = 1; i < piecesCounter.length; i++)
 			System.out.printf("%d = %d%n", i, piecesCounter[i]);
-
 	}
 
 	public static void displayChessboard(int[][] chessboard) {
@@ -53,7 +51,6 @@ public class Lt01_MatrizEx12 {
 
 			System.out.println();
 		}
-
 	}
 
 }

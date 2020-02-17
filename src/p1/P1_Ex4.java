@@ -1,13 +1,14 @@
 /*
- * Objetivo: Receber um valor positivo maior que 0, caso contrário emitir uma mensagem de erro e coletar o valor até ser válido
- * após isso chamar uma função recursiva que recebe o valor e retorne a soma da série.
+ * Objetivo: Receber um valor positivo maior que 0, caso contrário emitir 
+ * uma mensagem de erro e coletar o valor até ser válido após isso chamar 
+ * uma função recursiva que recebe o valor e retorne a soma da série.
  * 
  * 	1/(n) + 3/(n-1) + 5/(n-2) + ... + x/(n=1)
  * 
  * Autor: Gustavo Alves
  */
 
-package p1questoes;
+package p1;
 
 import javax.swing.JOptionPane;
 

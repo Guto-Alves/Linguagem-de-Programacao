@@ -19,13 +19,12 @@ public class Lt01_EstDecEx20 {
 		int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o coeficiente B: "));
 		int c = Integer.parseInt(JOptionPane.showInputDialog("Digite o coeficiente C: "));
 
-		// calcula valor do delta
 		double delta = Math.pow(b, 2) - 4 * a * c;
 
 		if (a == 0) // coeficiente 'A' não pode ser igual a zero
 			JOptionPane.showMessageDialog(null,
-					String.format("Exception: não é uma equação do 2º grau - 'A' invalído!"), "Solução da Equação",
-					JOptionPane.ERROR_MESSAGE);
+					String.format("Exception: não é uma equação do 2º grau - coeficiente 'A' invalído!"),
+					"Solução da Equação", JOptionPane.ERROR_MESSAGE);
 		else if (delta > 0) { // duas raízes
 			double x1 = (-b + Math.sqrt(delta)) / (2 * a);
 			double x2 = (-b - Math.sqrt(delta)) / (2 * a);
@@ -38,7 +37,6 @@ public class Lt01_EstDecEx20 {
 		} else // (delta < 0) nenhuma raiz
 			JOptionPane.showMessageDialog(null, "Equação não possui raízes reais... ", "Solução da Equação",
 					JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

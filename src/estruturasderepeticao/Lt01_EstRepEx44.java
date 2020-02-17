@@ -17,8 +17,10 @@ public class Lt01_EstRepEx44 {
 		int expoente = Integer.parseInt(JOptionPane.showInputDialog("Digite o expoente: "));
 
 		int pow = 1;
-		for (int i = 0; i < expoente; i++)
+
+		for (int i = 0; i < expoente; i++) {
 			pow *= base;
+		}
 
 		JOptionPane.showMessageDialog(null, String.format("%d ^ %d = %d", base, expoente, pow), "Resultado da Potência",
 				JOptionPane.INFORMATION_MESSAGE);

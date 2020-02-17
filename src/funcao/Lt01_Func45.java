@@ -10,11 +10,10 @@ package funcao;
 public class Lt01_Func45 {
 
 	public static void main(String[] args) {
-		System.out.printf("Resultado da série = %,.2f", calculaSerie());
-
+		System.out.printf("Resultado da série = %,.2f", calcularSerie());
 	}
 
-	public static double calculaSerie() {
+	public static double calcularSerie() {
 		double serie = 0;
 
 		for (int i = 1; i <= 15; i++)

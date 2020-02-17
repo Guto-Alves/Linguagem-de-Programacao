@@ -18,7 +18,6 @@ public class Lt01_Func37 {
 		JOptionPane.showMessageDialog(null, fibonacci(termo), "Série Fibonacci", JOptionPane.PLAIN_MESSAGE);
 	}
 
-	// Calcula e retorna a série de Fibonacci até o seu N’nésimo termo em um String
 	public static String fibonacci(int termo) {
 		String fibonacciSerie = "";
 		int numAnterior = 1;

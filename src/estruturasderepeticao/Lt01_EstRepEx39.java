@@ -16,7 +16,6 @@ public class Lt01_EstRepEx39 {
 
 		for (int i = 0; i < 64; i++)
 			System.out.printf("%2d\t%,.0f%n", i + 1, Math.pow(2, i));
-
 	}
 
 }

@@ -33,9 +33,7 @@ public class Lt01_EstDecEx29 {
 				JOptionPane.showMessageDialog(null,
 						String.format("Tipo investimento: Renda Fixa%nValor após 30 dias:%nde R$ %,.2f para R$ %,.2f.",
 								valorInvestimento, valorInvestimento * 1.05)); // renda fixa = 5%
-
 		}
-
 	}
 
 }

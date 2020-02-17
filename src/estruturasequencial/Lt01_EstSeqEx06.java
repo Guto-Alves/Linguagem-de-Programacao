@@ -16,7 +16,7 @@ public class Lt01_EstSeqEx06 {
 
 		int x;
 		int y;
-		int aux; // para armazenar temporáriamente o valor de x
+		int aux;
 
 		System.out.print("Digite um valor para X: ");
 		x = scanner.nextInt();

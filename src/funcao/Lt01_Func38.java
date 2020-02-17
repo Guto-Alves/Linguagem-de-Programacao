@@ -41,10 +41,10 @@ public class Lt01_Func38 {
 				i++;
 			}
 		}
+
 		scanner.close();
 
 		return String.format("Largest is %,.2f%nSmaller is %,.2f", largest, smaller);
-
 	}
 
 }

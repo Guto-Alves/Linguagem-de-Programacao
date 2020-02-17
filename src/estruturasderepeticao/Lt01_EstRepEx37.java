@@ -35,9 +35,7 @@ public class Lt01_EstRepEx37 {
 				numAnterior = numAtual;
 				numAtual = numProximo;
 			}
-
 		}
-
 	}
 
 }

@@ -96,13 +96,14 @@ public class CaixaEletronico {
 	public static void carregarNotas() {
 		for (int i = 1; i < quantidadeNotas.length; i++) {
 			int saldo = 0;
+
 			for (int j = 0; j < quantidadeNotas[0].length; j++) {
 				quantidadeNotas[i][j] = 100;
 				saldo += quantidadeNotas[i][j] * notas[j];
 			}
+
 			saldoCaixa[i] = saldo;
 		}
-
 	}
 
 	public static void retirarNotas() {
@@ -151,7 +152,6 @@ public class CaixaEletronico {
 
 		estatisticaPorBanco[codigoBanco][2]++;
 		estatisticaPorBanco[codigoBanco][3] += valorSerRetirado;
-
 	}
 
 	public static void retirarNotasPadrao(int codigoBanco, int valorSerRetirado) {
@@ -241,6 +241,5 @@ public class CaixaEletronico {
 		}
 
 		JOptionPane.showMessageDialog(null, banco, "Estatísticas separa por Banco", JOptionPane.PLAIN_MESSAGE);
-
 	}
 }

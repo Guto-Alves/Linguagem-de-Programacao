@@ -17,7 +17,6 @@ public class Lt01_Func33 {
 
 		JOptionPane.showMessageDialog(null, String.format("Resultado da série = %,.2f", serie33(number)),
 				"Série 1 + 1/2 + 1/3 + ... + 1/N", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static double serie33(int number) {
@@ -27,7 +26,6 @@ public class Lt01_Func33 {
 			series += (double) 1 / i;
 
 		return series;
-
 	}
 
 }

@@ -35,7 +35,6 @@ public class Lt01_EstDecEx28 {
 		// atual
 		preçoNovo = preçoAtual;
 
-		// calcula novo preço
 		if (mediaMensal < 500.0 && preçoAtual < 30.0)
 			preçoNovo = preçoAtual * 1.10;
 		else if (mediaMensal >= 500.0 && mediaMensal < 1000 && preçoAtual >= 30 && preçoAtual < 80)
@@ -44,7 +43,6 @@ public class Lt01_EstDecEx28 {
 			preçoNovo = preçoAtual * 0.95;
 
 		System.out.printf("Novo preço é R$ %,.2f", preçoNovo);
-
 	}
 
 }

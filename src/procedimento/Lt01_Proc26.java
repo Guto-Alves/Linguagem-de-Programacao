@@ -16,7 +16,6 @@ public class Lt01_Proc26 {
 		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo inteiro"));
 
 		multiplo(number1, number2);
-
 	}
 
 	public static void multiplo(int number1, int number2) {
@@ -32,7 +31,6 @@ public class Lt01_Proc26 {
 			else
 				JOptionPane.showMessageDialog(null, String.format("%d não é múltiplo do %d", number2, number1));
 		}
-
 	}
 
 }

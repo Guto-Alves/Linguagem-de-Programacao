@@ -23,7 +23,6 @@ public class Lt01_EstSeqEx09 {
 		int somaDosQuadrados = number1 * number1 + number2 * number2;
 
 		System.out.printf("Soma dos quadrados é %d%n", somaDosQuadrados);
-
 	}
 
 }

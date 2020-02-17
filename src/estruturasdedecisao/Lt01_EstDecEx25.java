@@ -52,7 +52,6 @@ public class Lt01_EstDecEx25 {
 
 			System.out.printf("%n  O JOGO DUROU %02d:%02d%n", diferencaHora, diferencaMinuto);
 		}
-
 	}
 
 }

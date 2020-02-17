@@ -20,7 +20,6 @@ public class Lt01_EstSeqEx07 {
 
 		JOptionPane.showMessageDialog(null, String.format("Volume = %,.2f cm³", volume), " - VOLUME PARALELEPÍPEDO",
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

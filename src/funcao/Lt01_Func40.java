@@ -20,6 +20,30 @@ public class Lt01_Func40 {
 
 	}
 
+	public static String primeNumbers(int number1, int number2) {
+		String primosString = "";
+		int largest;
+		int smaller;
+
+		if (number1 > number2) {
+			largest = number1;
+			smaller = number2;
+		} else {
+			largest = number2;
+			smaller = number1;
+		}
+
+		for (int i = smaller + 1; i < largest; i++) {
+			if (isPrime(i))
+				primosString += i + " ";
+		}
+
+		if (primosString.equals(""))
+			primosString = "não existe!";
+
+		return primosString;
+	}
+
 	public static boolean isPrime(int number) {
 		if (number < 2)
 			return false;
@@ -35,31 +59,6 @@ public class Lt01_Func40 {
 		}
 
 		return true;
-	}
-
-	public static String primeNumbers(int number1, int number2) {
-		String primosString = "";
-		int largest;
-		int smaller;
-
-		if (number1 > number2) {
-			largest = number1;
-			smaller = number2;
-		} else {
-			largest = number2;
-			smaller = number1;
-		}
-
-		// Verifica todos os números primos existentes entre eles
-		for (int i = smaller + 1; i < largest; i++) {
-			if (isPrime(i))
-				primosString += i + " ";
-		}
-
-		if (primosString.equals(""))
-			primosString = "não existe!";
-
-		return primosString;
 	}
 
 }

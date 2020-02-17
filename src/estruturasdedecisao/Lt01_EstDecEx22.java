@@ -27,7 +27,6 @@ public class Lt01_EstDecEx22 {
 			System.out.printf("Ordem crescente: %d, %d.%n", number2, number1);
 		else
 			System.out.printf("Ordem crescente: %d, %d.%n", number1, number2);
-
 	}
 
 }

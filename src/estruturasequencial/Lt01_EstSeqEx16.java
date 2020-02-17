@@ -37,15 +37,12 @@ public class Lt01_EstSeqEx16 {
 		numeroDescendentes = input.nextInt();
 		input.close();
 
-		// calcula salário bruto
 		salarioBruto = valorHora * horasTrabalhadas;
 
-		// calcula salário líquido
 		percentualDesconto = 1 - (percentualDesconto / 100);
 		salarioLiquido = (salarioBruto * percentualDesconto) + numeroDescendentes * 100;
 
 		System.out.printf("Salário a receber = R$ %,.2f", salarioLiquido);
-
 	}
 
 }

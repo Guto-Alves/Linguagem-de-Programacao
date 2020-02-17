@@ -12,10 +12,11 @@ public class Lt01_EstRepEx45 {
 	public static void main(String[] args) {
 		double serie = 0;
 
-		for (int i = 1; i <= 15; i++)
+		for (int i = 1; i <= 15; i++) {
 			serie += i / Math.pow(i, 2);
+		}
 
 		System.out.printf("Result of the series is: %,.2f ", serie);
-
 	}
+
 }

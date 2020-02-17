@@ -48,7 +48,6 @@ public class Lt01_Func30 {
 					ageInMonths(dayBirth, monthBirth, yearBirth, dayCurrent, monthCurrent, yearCurrent),
 					ageInDays(dayBirth, monthBirth, yearBirth, dayCurrent, monthCurrent, yearCurrent));
 		}
-
 	}
 
 	public static boolean isLeapYear(int year) {
@@ -113,7 +112,6 @@ public class Lt01_Func30 {
 		}
 
 		return valid;
-
 	}
 
 	public static int ageInDays(int dayBirth, int monthBirth, int yearBirth, int dayCurrent, int monthCurrent,
@@ -146,7 +144,6 @@ public class Lt01_Func30 {
 		}
 
 		return totalDays;
-
 	}
 
 	public static int ageInMonths(int dayBirth, int monthBirth, int yearBirth, int dayCurrent, int monthCurrent,
@@ -171,6 +168,7 @@ public class Lt01_Func30 {
 				}
 			}
 		}
+		
 		return ageMonths;
 	}
 

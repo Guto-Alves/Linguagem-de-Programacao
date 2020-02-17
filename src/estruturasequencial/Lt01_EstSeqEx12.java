@@ -16,8 +16,10 @@ public class Lt01_EstSeqEx12 {
 		int anoNascimento = Integer.parseInt(JOptionPane.showInputDialog("Digite seu ano de nascimento: "));
 		int anoAtual = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano atual: "));
 
-		JOptionPane.showMessageDialog(null, String.format("Sua idade é %d anos%nDaqui a 17 anos você terá %d",
-				(anoAtual - anoNascimento), (anoAtual - anoNascimento) + 17));
+		int idade = anoAtual - anoNascimento;
+
+		JOptionPane.showMessageDialog(null,
+				String.format("Sua idade é %d anos%nDaqui a 17 anos você terá %d", idade, idade + 17));
 	}
 
 }

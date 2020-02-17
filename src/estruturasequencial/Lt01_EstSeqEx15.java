@@ -1,5 +1,6 @@
 /*
- * Objetivo: Receba os valores de 2 catetos de um triângulo retângulo. Calcule e mostre a hipotenusa.
+ * Objetivo: Receba os valores de 2 catetos de um triângulo retângulo. 
+ * Calcule e mostre a hipotenusa.
  * 
  * Autor: Gustavo Alves
  * Data: 10 de fev de 2019
@@ -28,7 +29,6 @@ public class Lt01_EstSeqEx15 {
 		hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
 
 		System.out.printf("Hipotenusa = %,.0f cm", hipotenusa);
-
 	}
 
 }

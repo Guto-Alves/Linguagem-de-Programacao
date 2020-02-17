@@ -24,7 +24,6 @@ public class Lt01_EstSeqEx03 {
 		double areaTriangulo = (base * altura) / 2;
 
 		System.out.printf("%n¡rea do tri‚ngulo È %,.1f cm≤", areaTriangulo);
-
 	}
 
 }

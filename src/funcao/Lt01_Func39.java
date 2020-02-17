@@ -13,7 +13,6 @@ public class Lt01_Func39 {
 
 	public static void main(String[] args) {
 		System.out.println(graosTabuleiroXadrez());
-
 	}
 
 	public static String graosTabuleiroXadrez() {

@@ -5,13 +5,13 @@
  * 
  *  --     Menu Principal         --
  *  -- 1 - Carrega vetor          --
- *  -- 2 - Mostrar sequência Fibo --
+ *  -- 2 - Mostrar sequência Fibonacci --
  *  -- 3 - Fim 
  * 
  * Autor: Gustavo Alves
  */
 
-package p1questoes;
+package p1;
 
 import javax.swing.JOptionPane;
 
@@ -43,9 +43,8 @@ public class P1_Ex3 {
 				JOptionPane.showMessageDialog(null, "Opção inválida!");
 				break;
 			}
-			
-		} while (op != 9);
 
+		} while (op != 9);
 	}
 
 }

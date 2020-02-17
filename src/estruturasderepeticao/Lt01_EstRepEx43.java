@@ -10,17 +10,19 @@
 package estruturasderepeticao;
 
 public class Lt01_EstRepEx43 {
+
 	public static void main(String[] args) {
 		double ana = 1.10;
 		double maria = 1.50;
-		int ano = 0;
+		int totalAnos = 0;
 
 		while (ana < maria) {
-			ano++;
+			totalAnos++;
 			ana += 0.03;
 			maria += 0.02;
 		}
 
-		System.out.printf("Seram necessários %d anos para que Ana seja maior que Maria!", ano);
+		System.out.printf("Seram necessários %d anos para que Ana seja maior que Maria!", totalAnos);
 	}
+
 }

@@ -22,7 +22,6 @@ public class Lt01_EstDecEx24 {
 			System.out.printf("%d é divisível por 2 e 3.%n", number);
 		else
 			System.out.printf("%d não é divisível por 2 e 3.", number);
-
 	}
 
 }

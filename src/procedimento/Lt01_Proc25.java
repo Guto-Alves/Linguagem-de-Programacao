@@ -19,13 +19,12 @@ public class Lt01_Proc25 {
 		int minutoFinal = Integer.parseInt(JOptionPane.showInputDialog("Digite o minuto final"));
 
 		if (isValid(horaInicial, minutoInicial, horaFinal, minutoFinal))
-			calculaTempo(horaInicial, minutoInicial, horaFinal, minutoFinal);
+			calcularTempo(horaInicial, minutoInicial, horaFinal, minutoFinal);
 		else
 			JOptionPane.showMessageDialog(null, "Error: data(s) inválida(s)!", "Error", JOptionPane.ERROR_MESSAGE);
-
 	}
 
-	public static void calculaTempo(int horaInicial, int minutoInicial, int horaFinal, int minutoFinal) {
+	public static void calcularTempo(int horaInicial, int minutoInicial, int horaFinal, int minutoFinal) {
 		int diferencaHora = horaFinal - horaInicial;
 		int diferencaMinuto = minutoFinal - minutoInicial;
 
@@ -50,7 +49,6 @@ public class Lt01_Proc25 {
 			return false;
 
 		return true;
-
 	}
 
 }

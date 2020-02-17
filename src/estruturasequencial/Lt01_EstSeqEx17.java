@@ -33,7 +33,6 @@ public class Lt01_EstSeqEx17 {
 		litrosGastos = tempoPercurso * velocidadeMedia / 12;
 
 		System.out.printf("Consumo foi de %,.2f litros.", litrosGastos);
-
 	}
 
 }

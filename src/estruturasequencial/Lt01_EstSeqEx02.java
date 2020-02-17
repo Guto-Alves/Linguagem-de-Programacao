@@ -24,7 +24,6 @@ public class Lt01_EstSeqEx02 {
 		salarioReajuste = salarioAtual * 1.15;
 
 		System.out.printf("Novo salário com reajuste de 15%% = R$ %.2f", salarioReajuste);
-
 	}
 
 }

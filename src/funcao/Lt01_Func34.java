@@ -16,7 +16,6 @@ public class Lt01_Func34 {
 
 		JOptionPane.showMessageDialog(null, resultaTabuada(number), "Tabuada do " + number,
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static String resultaTabuada(int number) {
@@ -26,7 +25,6 @@ public class Lt01_Func34 {
 			result += number + " x " + i + " = " + (number * i) + "\n";
 
 		return result;
-
 	}
 
 }

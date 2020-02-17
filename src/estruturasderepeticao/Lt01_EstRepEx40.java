@@ -11,9 +11,6 @@ package estruturasderepeticao;
 import java.util.Scanner;
 
 public class Lt01_EstRepEx40 {
-	private enum Status {
-		YES, NO
-	};
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -21,7 +18,6 @@ public class Lt01_EstRepEx40 {
 		int number1, number2;
 		int largest;
 		int smaller;
-		Status primo = Status.YES;
 
 		System.out.print("Digite um número inteiro: ");
 		number1 = scanner.nextInt();
@@ -30,30 +26,36 @@ public class Lt01_EstRepEx40 {
 		number2 = scanner.nextInt();
 		scanner.close();
 
-		if (number1 > number2) {
-			largest = number1;
-			smaller = number2;
-		} else {
-			largest = number2;
+		if (number1 < number2) {
 			smaller = number1;
+			largest = number2;
+		} else {
+			smaller = number2;
+			largest = number1;
 		}
 
-		System.out.print("\nPrimos Entre os Números Digitados: ");
+		System.out.print("\nPrimos entre os números digitados: ");
+
 		for (int i = smaller + 1; i < largest; i++) {
 
-			double root = Math.sqrt(i);
-			for (int j = 2; j <= root; j++) {
-				if (i % j == 0) {
-					primo = Status.NO;
-					break;
+			boolean isPrimo = true;
+
+			if (i < 2) {
+				isPrimo = false;
+			} else {
+				double root = Math.sqrt(i);
+
+				for (int j = 2; j <= root; j++) {
+					if (i % j == 0) {
+						isPrimo = false;
+						break;
+					}
 				}
 			}
 
-			if (primo == Status.YES && i != 1)
+			if (isPrimo) {
 				System.out.printf("%d ", i);
-
-			primo = Status.YES;
-
+			}
 		}
 	}
 

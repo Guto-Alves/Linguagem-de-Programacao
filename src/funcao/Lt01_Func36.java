@@ -12,12 +12,10 @@ import javax.swing.JOptionPane;
 public class Lt01_Func36 {
 
 	public static void main(String[] args) {
-
 		int number = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
 
 		JOptionPane.showMessageDialog(null, String.format("Resultado da série = %,.2f", serie36(number)),
 				"Série  1 + 1/1! + 1/2! + ... + 1/N!", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static double serie36(int number) {

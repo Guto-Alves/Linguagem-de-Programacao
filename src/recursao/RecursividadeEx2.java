@@ -16,12 +16,10 @@ public class RecursividadeEx2 {
 
 		JOptionPane.showMessageDialog(null, String.format("Resultado da série é %d", calculaSerie(number)),
 				"Serie = (N) + (N-1) + (N-2) + ... + (1) ", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static int calculaSerie(int number) {
 		return number == 1 ? 1 : number + calculaSerie(number - 1);
-
 	}
 
 }

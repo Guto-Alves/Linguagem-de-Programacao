@@ -22,7 +22,6 @@ public class Lt01_EstSeqEx04 {
 		double Fahrenheit = (9 * Celsius + 160) / 5;
 
 		System.out.printf("%,.2f °C = %,.2f °F", Celsius, Fahrenheit);
-
 	}
 
 }

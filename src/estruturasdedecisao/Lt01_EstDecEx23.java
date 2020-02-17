@@ -39,11 +39,9 @@ public class Lt01_EstDecEx23 {
 				System.out.printf("Ordem crescente: %d, %d, %d, %d.", number1, number2, number4, number3);
 			else
 				System.out.printf("Ordem crescente: %d, %d, %d, %d.", number1, number2, number3, number4);
-
 		} else
 			System.err.println("Exception: valores não estão em ordem crescente!");
 
 		input.close();
-
 	}
 }

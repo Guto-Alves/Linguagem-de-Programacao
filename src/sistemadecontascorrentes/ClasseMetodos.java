@@ -15,6 +15,7 @@ public class ClasseMetodos {
 
 	public void cadastrarContas(Conta[] contasCorrentes) throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(accountsFile));
+
 		int counter = 0;
 
 		while (counter < contasCorrentes.length) {
@@ -27,7 +28,9 @@ public class ClasseMetodos {
 				counter++;
 			}
 		}
+
 		writer.close();
+
 		sortFile(accountsFile, contasCorrentes);
 	}
 
@@ -44,7 +47,9 @@ public class ClasseMetodos {
 				i++;
 			}
 		}
+
 		writer.close();
+
 		sortFile(movementsFile, movimentosContas);
 	}
 
@@ -53,6 +58,7 @@ public class ClasseMetodos {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(updatedAccountFile));
 
 		String accountLine;
+
 		while ((accountLine = accountsReader.readLine()) != null) {
 			String[] accountTokens = accountLine.split(" ");
 
@@ -62,6 +68,7 @@ public class ClasseMetodos {
 
 			BufferedReader movementReader = new BufferedReader(new FileReader(movementsFile));
 			String movementLine;
+
 			while ((movementLine = movementReader.readLine()) != null) {
 				String[] movementTokens = movementLine.split(" ");
 
@@ -85,6 +92,7 @@ public class ClasseMetodos {
 						}
 					}
 				}
+				
 				if (account.getCod() < movement.getCod())
 					break;
 			}

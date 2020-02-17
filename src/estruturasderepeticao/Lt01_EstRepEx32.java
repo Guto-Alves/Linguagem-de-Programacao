@@ -22,6 +22,5 @@ public class Lt01_EstRepEx32 {
 
 		JOptionPane.showMessageDialog(null, String.format("%d! = %d", number, fat), "Factorial is",
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
 }

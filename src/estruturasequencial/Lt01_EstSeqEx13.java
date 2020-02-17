@@ -1,5 +1,6 @@
 /* 
- * Objetivo:  Receba a quantidade de alimento em quilos. Calcule e mostre quantos dias durará esse alimento sabendo que a pessoa consome 50g ao dia.
+ * Objetivo:  Receba a quantidade de alimento em quilos. Calcule e mostre quantos 
+ * dias durará esse alimento sabendo que a pessoa consome 50g ao dia.
  * 
  * Autor: Gustavo Alves
  * Data: 10 de fev de 2019
@@ -19,7 +20,6 @@ public class Lt01_EstSeqEx13 {
 		input.close();
 
 		System.out.printf("Esse alimento durará %d dias.", (int) (qtdeAlimentoKg * 1000) / 50);
-
 	}
 
 }

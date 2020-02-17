@@ -13,16 +13,16 @@ import javax.swing.JOptionPane;
 public class Lt01_Func35 {
 
 	public static void main(String[] args) {
-		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número inteiro"));
-		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número inteiro"));
+		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
+		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro número inteiro"));
 
-		JOptionPane.showMessageDialog(null, String.format("Somatória dos impares entre %d e %d = %d", number1, number2,
-				somatoriaImpares(number1, number2)), "Somatória Impares", JOptionPane.INFORMATION_MESSAGE);
-		somatoriaImpares(number1, number2);
-
+		JOptionPane.showMessageDialog(null,
+				String.format("Somatória dos impares entre %d e %d = %d", number1, number2,
+						calcularSomatoriaDosImpares(number1, number2)),
+				"Somatória Impares", JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	public static int somatoriaImpares(int number1, int number2) {
+	public static int calcularSomatoriaDosImpares(int number1, int number2) {
 		int largest;
 		int smaller;
 		int result = 0;
@@ -41,6 +41,5 @@ public class Lt01_Func35 {
 		}
 
 		return result;
-
 	}
 }

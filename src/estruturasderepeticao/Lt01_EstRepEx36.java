@@ -15,16 +15,15 @@ public class Lt01_EstRepEx36 {
 		Scanner scanner = new Scanner(System.in);
 
 		int number;
-		double series = 1;
+		double series = 0;
 
 		System.out.print("Enter a integer: ");
 		number = scanner.nextInt();
 		scanner.close();
 
-		// Calcule e mostre a série 1 + 1/1! + 1/2! + ... + 1/N!
-		for (int i = 1; i <= number; i++) {
+		for (int i = 0; i <= number; i++) {
 
-			// calcula o fatorial do denominador da série
+			// calcula o fatorial do denominador
 			int fat = 1;
 			for (int j = i; j > 1; j--)
 				fat *= j;
@@ -33,7 +32,6 @@ public class Lt01_EstRepEx36 {
 		}
 
 		System.out.printf("Series result is %,.2f", series);
-
 	}
 
 }

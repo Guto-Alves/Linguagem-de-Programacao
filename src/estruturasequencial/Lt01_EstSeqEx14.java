@@ -19,13 +19,11 @@ public class Lt01_EstSeqEx14 {
 
 		System.out.print("2º ângulo: ");
 		int angulo2 = input.nextInt();
+		input.close();
 
 		int angulo3 = 180 - (angulo1 + angulo2);
 
 		System.out.printf("3º ângulo = %d", angulo3);
-
-		input.close();
-
 	}
 
 }

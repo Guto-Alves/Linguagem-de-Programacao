@@ -22,11 +22,10 @@ public class Lt01_Proc28 {
 		double precoAtual = Double.parseDouble(JOptionPane.showInputDialog("Digite o preço atual"));
 		double vendaMensal = Double.parseDouble(JOptionPane.showInputDialog("Digite a venda mensal"));
 
-		novoPreco(precoAtual, vendaMensal);
-
+		mostrarNovoPreco(precoAtual, vendaMensal);
 	}
 
-	public static void novoPreco(double precoAtual, double vendaMensal) {
+	public static void mostrarNovoPreco(double precoAtual, double vendaMensal) {
 		double precoNovo = precoAtual; // para outras condições, preço novo será igual ao preço atual
 
 		if (vendaMensal < 500.0 && precoAtual < 30)

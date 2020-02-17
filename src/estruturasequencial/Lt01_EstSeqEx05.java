@@ -15,8 +15,8 @@ public class Lt01_EstSeqEx05 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		int a, b, c; // coeficientes de uma equação do 2º grau
-		double raiz1, raiz2; // raízes reais
+		int a, b, c;
+		double raiz1, raiz2;
 
 		System.out.print("Digite o coeficiente A: ");
 		a = scanner.nextInt();
@@ -33,7 +33,6 @@ public class Lt01_EstSeqEx05 {
 
 		System.out.printf("Raiz 1: %,.2f%n", raiz1);
 		System.out.printf("Raiz 2: %,.2f%n", raiz2);
-
 	}
 
 }

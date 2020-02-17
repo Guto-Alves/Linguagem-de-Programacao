@@ -32,7 +32,6 @@ public class Lt01_EstDecEx26 {
 				System.out.printf("%d é multiplo do %d", number2, number1);
 			else
 				System.out.printf("%d é não multiplo do %d", number1, number2);
-
 		}
 	}
 

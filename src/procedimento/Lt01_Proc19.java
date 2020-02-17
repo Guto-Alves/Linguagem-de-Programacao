@@ -18,7 +18,6 @@ public class Lt01_Proc19 {
 				"Maior de Dois Números", JOptionPane.PLAIN_MESSAGE));
 
 		larger(number1, number2);
-
 	}
 
 	public static void larger(double number1, double number2) {

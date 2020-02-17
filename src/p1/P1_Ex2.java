@@ -5,7 +5,7 @@
  * Autor: Gustavo Alves
  */
 
-package p1questoes;
+package p1;
 
 import javax.swing.JOptionPane;
 
@@ -31,7 +31,6 @@ public class P1_Ex2 {
 		}
 
 		JOptionPane.showMessageDialog(null, sequencia);
-
 	}
 
 }

@@ -17,7 +17,6 @@ public class Lt01_Func32 {
 
 		JOptionPane.showMessageDialog(null, String.format("%,d ! = %,d", number, factorial(number)), "Fatorial",
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static int factorial(int number) {
@@ -27,7 +26,6 @@ public class Lt01_Func32 {
 			fat *= i;
 
 		return fat;
-
 	}
 
 }

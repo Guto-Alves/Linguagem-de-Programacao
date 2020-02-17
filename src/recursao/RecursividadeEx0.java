@@ -17,7 +17,6 @@ public class RecursividadeEx0 {
 
 		JOptionPane.showMessageDialog(null, String.format("%d! = %d", number, fatorial(number)), "Fatorial",
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static int fatorial(int number) throws IllegalArgumentException {
@@ -25,7 +24,6 @@ public class RecursividadeEx0 {
 			throw new IllegalArgumentException("Não existe fatorial de número negativo");
 
 		return number == 0 ? 1 : number * fatorial(number - 1);
-
 	}
 
 }
