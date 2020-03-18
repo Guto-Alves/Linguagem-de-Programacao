@@ -12,21 +12,19 @@ import javax.swing.JOptionPane;
 public class Lt01_Proc22 {
 
 	public static void main(String[] args) {
-		int numero1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
-		int numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro inteiro"));
+		int number1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
+		int number2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro inteiro"));
 
-		ordemCrescente(numero1, numero2);
-
+		showInAscendingOrder(number1, number2);
 	}
 
-	public static void ordemCrescente(int numero1, int numero2) {
-		if (numero1 < numero2)
-			JOptionPane.showMessageDialog(null, String.format("%d, %d.", numero1, numero2), "Ordem Crescente",
+	public static void showInAscendingOrder(int number1, int number2) {
+		if (number1 < number2)
+			JOptionPane.showMessageDialog(null, String.format("%d, %d.", number1, number2), "Ordem Crescente",
 					JOptionPane.INFORMATION_MESSAGE);
 		else
-			JOptionPane.showMessageDialog(null, String.format("%d, %d.", numero2, numero1), "Ordem Crescente",
+			JOptionPane.showMessageDialog(null, String.format("%d, %d.", number2, number1), "Ordem Crescente",
 					JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

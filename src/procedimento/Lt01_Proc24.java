@@ -12,11 +12,9 @@ import javax.swing.JOptionPane;
 public class Lt01_Proc24 {
 
 	public static void main(String[] args) {
-		int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um inteiro: ", "Divisível por 2 e 3",
-				JOptionPane.QUESTION_MESSAGE));
+		int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um inteiro: "));
 
 		divisible(number);
-
 	}
 
 	public static void divisible(int number) {
@@ -26,7 +24,6 @@ public class Lt01_Proc24 {
 		else
 			JOptionPane.showMessageDialog(null, String.format("%d não é divisível por 2 e 3.", number),
 					"Divisível por 2 e 3", JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

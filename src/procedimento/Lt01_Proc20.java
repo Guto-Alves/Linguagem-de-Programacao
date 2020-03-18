@@ -17,34 +17,28 @@ public class Lt01_Proc20 {
 		int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o coeficiente B"));
 		int c = Integer.parseInt(JOptionPane.showInputDialog("Digite o coeficiente C"));
 
-		calculaEquacao2Grau(a, b, c);
-
+		calcularEquacao2Grau(a, b, c);
 	}
 
-	// Verifiqua e mostra a existência de raízes reais e se caso exista, calcula e
-	// mostra
-	public static void calculaEquacao2Grau(int a, int b, int c) {
-
-		// calcula delta
+	public static void calcularEquacao2Grau(int a, int b, int c) {
 		double delta = Math.pow(b, 2) - 4 * a * c;
 
-		if (a == 0) // coeficiente 'A' não pode ser igual a zero
+		if (a == 0) {
 			JOptionPane.showMessageDialog(null,
 					String.format("Exception: não é uma equação do 2º grau - 'A' invalído!"), "Solução da Equação",
 					JOptionPane.ERROR_MESSAGE);
-		else if (delta > 0) { // duas raízes
+		} else if (delta > 0) { // duas raízes
 			double x1 = (-b + Math.sqrt(delta)) / (2 * a);
 			double x2 = (-b - Math.sqrt(delta)) / (2 * a);
-			JOptionPane.showMessageDialog(null, String.format("X' = %,.0f%nX\" = %,.0f ", x1, x2), "Solução da Equação",
+			JOptionPane.showMessageDialog(null, String.format("X' = %,.1f%nX\" = %,.1f ", x1, x2), "Solução da Equação",
 					JOptionPane.INFORMATION_MESSAGE);
 		} else if (delta == 0) { // raíz única
 			double x1 = (-b + Math.sqrt(delta)) / (2 * a);
-			JOptionPane.showMessageDialog(null, String.format("X' = X\" = %,.0f", x1), "Solução da Equação",
+			JOptionPane.showMessageDialog(null, String.format("X' = X\" = %,.1f", x1), "Solução da Equação",
 					JOptionPane.INFORMATION_MESSAGE);
 		} else // (delta < 0) nenhuma raiz
 			JOptionPane.showMessageDialog(null, "Equação não possui raízes reais... ", "Solução da Equação",
 					JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }

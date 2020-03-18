@@ -12,18 +12,20 @@ package procedimento;
 import javax.swing.JOptionPane;
 
 public class Lt01_Proc29 {
+	private static final int POUPANCA = 1;
+	private static final int RENDA_FIXA = 2;
 
 	public static void main(String[] args) {
 		int tipoInvestimento = Integer.parseInt(JOptionPane
 				.showInputDialog("Menu de opções\n1. Poupança\n2. Renda fixa\n - Digite o tipo de invesvimento: "));
 
-		if (tipoInvestimento < 1 || tipoInvestimento > 2) {
+		if (tipoInvestimento != POUPANCA && tipoInvestimento != RENDA_FIXA) {
 			JOptionPane.showMessageDialog(null, "Erro: tipo de investimento inválido!", "Erro",
 					JOptionPane.ERROR_MESSAGE);
 		} else {
 			double valorInvestimento = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do investimento:"));
 
-			if (valorInvestimento <= 0.0) {
+			if (valorInvestimento > 0.0) {
 				calcularInvestimento(tipoInvestimento, valorInvestimento);
 			} else {
 				JOptionPane.showMessageDialog(null, "Erro: valor do investimento inválido!", "Erro",
@@ -35,7 +37,7 @@ public class Lt01_Proc29 {
 	public static void calcularInvestimento(int tipoInvestimento, double valorInvestimento) {
 		double valorCorrigido;
 
-		if (tipoInvestimento == 1) // poupança
+		if (tipoInvestimento == POUPANCA)
 			valorCorrigido = valorInvestimento * 1.03;
 		else // renda fixa
 			valorCorrigido = valorInvestimento * 1.05;

@@ -21,18 +21,18 @@ public class Lt01_EstDecEx29 {
 		double valorInvestimento = Double
 				.parseDouble(JOptionPane.showInputDialog("- Digite o valor do investimento: "));
 
-		if (tipoInvestimento < 1 || tipoInvestimento > 2 || valorInvestimento < 0.0)
+		if (tipoInvestimento < 1 || tipoInvestimento > 2 || valorInvestimento <= 0.0)
 			JOptionPane.showMessageDialog(null, "Exception: tipo e/ou valor do investimento invalído!", "Exception",
 					JOptionPane.ERROR_MESSAGE);
 		else {
-			if (tipoInvestimento == 1)
+			if (tipoInvestimento == 1) // poupança rende = 3%
 				JOptionPane.showMessageDialog(null,
 						String.format("Tipo investimento: Poupança%nValor após 30 dias:%nde R$ %,.2f para R$ %,.2f.",
-								valorInvestimento, valorInvestimento * 1.03)); // poupança rende = 3%
-			else
+								valorInvestimento, valorInvestimento * 1.03));
+			else // renda fixa = 5%
 				JOptionPane.showMessageDialog(null,
 						String.format("Tipo investimento: Renda Fixa%nValor após 30 dias:%nde R$ %,.2f para R$ %,.2f.",
-								valorInvestimento, valorInvestimento * 1.05)); // renda fixa = 5%
+								valorInvestimento, valorInvestimento * 1.05));
 		}
 	}
 

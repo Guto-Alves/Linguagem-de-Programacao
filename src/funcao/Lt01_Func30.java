@@ -157,7 +157,7 @@ public class Lt01_Func30 {
 			int auxMonth = monthBirth;
 			int auxYear = yearBirth;
 
-			for (; auxMonth != monthCurrent || auxYear != yearCurrent;) {
+			while (auxMonth != monthCurrent || auxYear != yearCurrent) {
 				if (auxMonth == 12) {
 					auxMonth = 1;
 					auxYear++;
@@ -168,7 +168,7 @@ public class Lt01_Func30 {
 				}
 			}
 		}
-		
+
 		return ageMonths;
 	}
 

@@ -20,9 +20,10 @@ public class Lt01_EstSeqEx16 {
 		double horasTrabalhadas;
 		double valorHora;
 		double percentualDesconto;
-		int numeroDescendentes; // número de filhos
+		int numeroDescendentes;
 		double salarioBruto;
 		double salarioLiquido;
+		double desconto;
 
 		System.out.print("Quantidade de horas trabalhadas: ");
 		horasTrabalhadas = input.nextDouble();
@@ -39,8 +40,9 @@ public class Lt01_EstSeqEx16 {
 
 		salarioBruto = valorHora * horasTrabalhadas;
 
-		percentualDesconto = 1 - (percentualDesconto / 100);
-		salarioLiquido = (salarioBruto * percentualDesconto) + numeroDescendentes * 100;
+		desconto = salarioBruto * percentualDesconto / 100;
+		
+		salarioLiquido = (salarioBruto - desconto) + numeroDescendentes * 100;
 
 		System.out.printf("Salário a receber = R$ %,.2f", salarioLiquido);
 	}

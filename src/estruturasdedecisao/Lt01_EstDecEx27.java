@@ -31,9 +31,10 @@ public class Lt01_EstDecEx27 {
 
 		extensaoCirculo /= 1000; // transforma metro em km
 		tempoDuracao /= 60; // transforma minuto em hora
+		
 		double velocidadeMedia = (extensaoCirculo * numVoltas) / tempoDuracao;
 
-		System.out.printf("Velocidade média = %,.0f km/h.", velocidadeMedia);
+		System.out.printf("Velocidade média = %,.1f km/h.", velocidadeMedia);
 	}
 
 }

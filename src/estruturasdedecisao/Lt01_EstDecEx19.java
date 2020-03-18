@@ -15,10 +15,7 @@ public class Lt01_EstDecEx19 {
 		double number1 = Double.parseDouble(JOptionPane.showInputDialog("Digite um número real: "));
 		double number2 = Double.parseDouble(JOptionPane.showInputDialog("Digite outro número real: "));
 
-		if (number1 == number2)
-			JOptionPane.showMessageDialog(null, "- Os números são iguais ", "Resultado",
-					JOptionPane.INFORMATION_MESSAGE);
-		else if (number1 > number2)
+		if (number1 > number2)
 			JOptionPane.showMessageDialog(null, String.format("O maior é %,.1f", number1), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
 		else

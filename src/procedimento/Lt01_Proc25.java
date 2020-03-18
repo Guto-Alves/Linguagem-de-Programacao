@@ -18,7 +18,7 @@ public class Lt01_Proc25 {
 		int horaFinal = Integer.parseInt(JOptionPane.showInputDialog("Digite a hora final"));
 		int minutoFinal = Integer.parseInt(JOptionPane.showInputDialog("Digite o minuto final"));
 
-		if (isValid(horaInicial, minutoInicial, horaFinal, minutoFinal))
+		if (validar(horaInicial, minutoInicial, horaFinal, minutoFinal))
 			calcularTempo(horaInicial, minutoInicial, horaFinal, minutoFinal);
 		else
 			JOptionPane.showMessageDialog(null, "Error: data(s) inválida(s)!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -43,7 +43,7 @@ public class Lt01_Proc25 {
 				"Tempo Total", JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	public static boolean isValid(int horaInicial, int minutoInicial, int horaFinal, int minutoFinal) {
+	public static boolean validar(int horaInicial, int minutoInicial, int horaFinal, int minutoFinal) {
 		if (horaInicial < 0 || horaInicial > 23 || minutoInicial < 0 || minutoInicial > 59 || horaFinal < 0
 				|| horaFinal > 23 || minutoFinal < 0 || minutoFinal > 59)
 			return false;

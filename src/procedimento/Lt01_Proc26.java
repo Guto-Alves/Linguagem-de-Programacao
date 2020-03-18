@@ -24,7 +24,6 @@ public class Lt01_Proc26 {
 				JOptionPane.showMessageDialog(null, String.format("%d é múltiplo do %d", number1, number2));
 			else
 				JOptionPane.showMessageDialog(null, String.format("%d não é múltiplo do %d", number1, number2));
-
 		} else {
 			if (number2 % number1 == 0)
 				JOptionPane.showMessageDialog(null, String.format("%d é múltiplo do %d", number2, number1));

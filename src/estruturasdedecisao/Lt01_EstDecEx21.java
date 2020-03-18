@@ -25,13 +25,13 @@ public class Lt01_EstDecEx21 {
 		double media = (n1 + n2 + n3 + n4) / 4;
 
 		if (media >= 6.0)
-			JOptionPane.showMessageDialog(null, String.format("  APROVADO!%nMédia = %,.2f", media), "Resultado",
+			JOptionPane.showMessageDialog(null, String.format("APROVADO!%nMédia = %,.2f", media), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
 		else if (media >= 3.0 && media < 6.0)
-			JOptionPane.showMessageDialog(null, String.format("  EXAME!%nMédia = %,.2f", media), "Resultado",
+			JOptionPane.showMessageDialog(null, String.format("EXAME!%nMédia = %,.2f", media), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
-		else if (media < 3.0)
-			JOptionPane.showMessageDialog(null, String.format("  RETIDO!%nMédia = %,.2f", media), "Resultado",
+		else
+			JOptionPane.showMessageDialog(null, String.format("RETIDO!%nMédia = %,.2f", media), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
 	}
 

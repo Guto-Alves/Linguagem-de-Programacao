@@ -39,13 +39,14 @@ public class Lt01_EstDecEx25 {
 			int diferencaHora = horaFinal - horaInicial;
 			int diferencaMinuto = minFinal - minInicial;
 
+			if (diferencaHora < 0) {
+				diferencaHora = 24 + diferencaHora;
+			}
+
 			if (diferencaMinuto < 0) {
 				diferencaHora--;
 				diferencaMinuto = 60 + diferencaMinuto;
 			}
-
-			if (diferencaHora < 0)
-				diferencaHora = 24 + diferencaHora;
 
 			if (diferencaHora == 0 && diferencaMinuto == 0)
 				diferencaHora = 24;

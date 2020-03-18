@@ -22,17 +22,18 @@ public class Lt01_Proc16 {
 		double percentualDesconto = Double.parseDouble(JOptionPane.showInputDialog("Digite o percentual de desconto"));
 		double numeroDescendentes = Double.parseDouble(JOptionPane.showInputDialog("Digite o número de descendentes"));
 
-		calculaSalario(horasTrabalhadas, valorHora, percentualDesconto, numeroDescendentes);
+		calcularSalario(horasTrabalhadas, valorHora, percentualDesconto, numeroDescendentes);
 	}
 
 	public static void calcularSalario(double horasTrabalhadas, double valorHora, double percentualDesconto,
 			double numeroDescendentes) {
+		double salarioBruto = horasTrabalhadas * valorHora;
+		
+		double valorDesconto = salarioBruto * percentualDesconto / 100;
+		
+		double salarioLiquido = (salarioBruto - valorDesconto) + numeroDescendentes * 100;
 
-		double salario = ((horasTrabalhadas * valorHora) - percentualDesconto) + 100 * numeroDescendentes;
-
-		JOptionPane.showMessageDialog(null, String.format("Salário a receber R$ %,.2f", salario), "Salário",
+		JOptionPane.showMessageDialog(null, String.format("Salário a receber R$ %,.2f", salarioLiquido), "Salário",
 				JOptionPane.INFORMATION_MESSAGE);
-
 	}
-
 }

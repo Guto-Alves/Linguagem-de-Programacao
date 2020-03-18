@@ -7,22 +7,28 @@
 
 package funcao;
 
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Lt01_Func34 {
 
 	public static void main(String[] args) {
-		int number = Integer.parseInt(JOptionPane.showInputDialog("Digite um número"));
+		Scanner input = new Scanner(System.in);
 
-		JOptionPane.showMessageDialog(null, resultaTabuada(number), "Tabuada do " + number,
-				JOptionPane.INFORMATION_MESSAGE);
+		System.out.print("Digite um número inteiro: ");
+		int number = input.nextInt();
+
+		input.close();
+
+		System.out.println(calculateMultiplicationTable(number));
 	}
 
-	public static String resultaTabuada(int number) {
+	public static String calculateMultiplicationTable(int number) {
 		String result = "";
 
 		for (int i = 1; i <= 10; i++)
-			result += number + " x " + i + " = " + (number * i) + "\n";
+			result += String.format("%d x %2d = %3d%n", number, i, number * i);
+
+		System.out.println(result);
 
 		return result;
 	}

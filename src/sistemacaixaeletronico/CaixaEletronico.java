@@ -38,12 +38,12 @@ package sistemacaixaeletronico;
 import javax.swing.JOptionPane;
 
 public class CaixaEletronico {
+	private static final String[] nomesDosBancos = { null, "Banco do Brasil", "Santander", "Itaú", "Caixa" };
+	private static int[][] estatisticaPorBanco = new int[5][5];
+
 	private static int[] notas = { 100, 50, 20, 10, 5, 2 };
 	private static int[][] quantidadeNotas = new int[5][notas.length];
 	private static int[] saldoCaixa = new int[5];
-
-	private static final String[] nomesDosBancos = { null, "Banco do Brasil", "Santander", "Itaú", "Caixa" };
-	private static int[][] estatisticaPorBanco = new int[5][5];
 
 	private static int counterRetiradas = 0;
 
@@ -90,7 +90,6 @@ public class CaixaEletronico {
 		if (counterRetiradas == 100)
 			JOptionPane.showMessageDialog(null, "Você atingiu o limite de retiradas.", "Encerrando",
 					JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 	public static void carregarNotas() {
@@ -145,6 +144,7 @@ public class CaixaEletronico {
 		// coleta informação para gerar as estatísticas
 		if (valorSerRetirado > estatisticaPorBanco[codigoBanco][0])
 			estatisticaPorBanco[codigoBanco][0] = valorSerRetirado;
+
 		if (estatisticaPorBanco[codigoBanco][1] == 0)
 			estatisticaPorBanco[codigoBanco][1] = valorSerRetirado;
 		else if (valorSerRetirado < estatisticaPorBanco[codigoBanco][1])

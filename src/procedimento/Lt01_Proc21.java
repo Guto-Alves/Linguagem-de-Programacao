@@ -34,7 +34,7 @@ public class Lt01_Proc21 {
 		else if (average >= 3.0 && average < 6.0)
 			JOptionPane.showMessageDialog(null, String.format("Média = %,.2f EXAME!", average), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
-		else if (average < 3.0)
+		else
 			JOptionPane.showMessageDialog(null, String.format("Média = %,.2f RETIDO!", average), "Resultado",
 					JOptionPane.INFORMATION_MESSAGE);
 	}
